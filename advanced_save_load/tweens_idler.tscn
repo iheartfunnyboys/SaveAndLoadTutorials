@@ -1,0 +1,301 @@
+[gd_scene load_steps=37 format=3 uid="uid://ht2byaaqouon"]
+
+[ext_resource type="PackedScene" uid="uid://dgkbgq4e38lco" path="res://1_tweens_idler/growth_button.tscn" id="1_5scdr"]
+[ext_resource type="Script" uid="uid://bw7ol6rtus8xb" path="res://1_tweens_idler/tweens_idler.gd" id="1_vqj28"]
+[ext_resource type="AudioStream" uid="uid://bj1hkg7nu0kb6" path="res://1_tweens_idler/Phat Phrog Studio - Aether Melody - Pixel Pathfinder.ogg" id="2_p1tfi"]
+[ext_resource type="FontFile" uid="uid://dir6j7aie5jvw" path="res://1_tweens_idler/Micro_5/Micro5-Regular.ttf" id="3_6srta"]
+[ext_resource type="Texture2D" uid="uid://hc5dj4qe1g55" path="res://1_tweens_idler/ui_frame.tres" id="3_32iff"]
+[ext_resource type="AudioStream" uid="uid://cyhkmwo5j64g8" path="res://1_tweens_idler/wind_general_soft_low_loop.ogg" id="3_cvr5m"]
+[ext_resource type="Script" uid="uid://ijujppbximvv" path="res://1_tweens_idler/fruit_count_lbl.gd" id="4_1dyn0"]
+[ext_resource type="AudioStream" uid="uid://bwhkjue4ye6g" path="res://1_tweens_idler/birds_small_calling_chirping_loop.ogg" id="4_t86lh"]
+[ext_resource type="Script" uid="uid://dly20lbfgom1k" path="res://1_tweens_idler/custom_cursor.gd" id="5_6y3jb"]
+[ext_resource type="Script" uid="uid://croc10gbsjfai" path="res://ui_sfx_manager.gd" id="5_xtgq4"]
+[ext_resource type="AudioStream" uid="uid://b6klxuweryeqc" path="res://1_tweens_idler/sfx/Button7.mp3" id="6_2tkuq"]
+[ext_resource type="AudioStream" uid="uid://do5nwe3tt6fow" path="res://1_tweens_idler/sfx/Button6.mp3" id="7_13nck"]
+[ext_resource type="PackedScene" uid="uid://d5cxl162eu2n" path="res://1_tweens_idler/butterfly.tscn" id="7_75j07"]
+[ext_resource type="AudioStream" uid="uid://cvna6ljk7w81q" path="res://1_tweens_idler/sfx/small_object_close_lid_01.wav" id="8_5y85u"]
+[ext_resource type="AudioStream" uid="uid://b8motrlln0ala" path="res://1_tweens_idler/sfx/switch_button_push_on_off_03.wav" id="9_8sect"]
+[ext_resource type="PackedScene" uid="uid://i2hxhk3orys1" path="res://1_tweens_idler/audio_control_panel.tscn" id="9_55b0d"]
+[ext_resource type="Texture2D" uid="uid://b8d3x3dl85wcr" path="res://1_tweens_idler/Butterflies.png" id="9_cvr5m"]
+[ext_resource type="Script" uid="uid://bl2p2b2v8srsx" path="res://1_tweens_idler/background_manager.gd" id="10_5y85u"]
+[ext_resource type="Texture2D" uid="uid://co5yatp0x1apm" path="res://1_tweens_idler/HUD.png" id="12_t2s1e"]
+[ext_resource type="Theme" uid="uid://762bfvmhp5ho" path="res://1_tweens_idler/tweens_idler_theme.tres" id="13_h0t22"]
+[ext_resource type="Script" uid="uid://dsvdpoiqv2iij" path="res://addons/open_close_enhanced_panel_btn.gd" id="13_nei2r"]
+[ext_resource type="Texture2D" uid="uid://x1c4vkys714x" path="res://1_tweens_idler/button.png" id="14_6cb2f"]
+[ext_resource type="Script" uid="uid://cggal82yjvuj1" path="res://addons/enhanced_button.gd" id="21_13nck"]
+[ext_resource type="Script" uid="uid://dv26n7vu8b5h" path="res://2_advanced_saving/open_save_manager.gd" id="24_kf2lf"]
+
+[sub_resource type="Gradient" id="Gradient_t2s1e"]
+offsets = PackedFloat32Array(0.093294464, 0.32069972, 0.5041051, 0.6715928)
+colors = PackedColorArray(0.077786244, 0.5245148, 0.7648661, 1, 0.5254512, 0.79988575, 0.99075013, 1, 0.42508444, 0.7057021, 0.34802705, 1, 0.13579714, 0.5073585, 6.738305e-07, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_75j07"]
+gradient = SubResource("Gradient_t2s1e")
+width = 1
+height = 18
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_32iff"]
+offsets = PackedFloat32Array(0, 0, 0.2857143, 0.5041051, 0.6715928)
+colors = PackedColorArray(0.006402653, 0.14519483, 0.32248262, 1, 0.006402653, 0.14519483, 0.32248262, 1, 0.014904794, 0.2154929, 0.45089436, 1, 0.13366407, 0.24690092, 0.10277798, 1, 0.030513609, 0.20168191, 2.4065375e-08, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_13nck"]
+gradient = SubResource("Gradient_32iff")
+width = 1
+height = 18
+fill_to = Vector2(0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oog20"]
+atlas = ExtResource("12_t2s1e")
+region = Rect2(427, 17, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75j07"]
+texture = ExtResource("3_32iff")
+texture_margin_left = 26.0
+texture_margin_top = 6.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqj28"]
+font = ExtResource("3_6srta")
+font_size = 84
+font_color = Color(0.9999998, 0.9409004, 0.8791547, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.40784314)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t86lh"]
+resource_local_to_scene = true
+atlas = ExtResource("9_cvr5m")
+region = Rect2(0, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55b0d"]
+resource_local_to_scene = true
+atlas = ExtResource("9_cvr5m")
+region = Rect2(0, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nei2r"]
+resource_local_to_scene = true
+atlas = ExtResource("9_cvr5m")
+region = Rect2(0, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtgq4"]
+atlas = ExtResource("14_6cb2f")
+region = Rect2(85, 4, 5, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y85u"]
+atlas = ExtResource("14_6cb2f")
+region = Rect2(243, 3, 10, 8)
+
+[node name="TweensIdler" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqj28")
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_p1tfi")
+volume_db = -2.5
+autoplay = true
+bus = &"music"
+
+[node name="Wind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cvr5m")
+volume_db = 2.5
+autoplay = true
+bus = &"ambiance"
+
+[node name="Birds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t86lh")
+volume_db = -12.5
+autoplay = true
+bus = &"ambiance"
+
+[node name="UISfxManager" type="Node" parent="."]
+script = ExtResource("5_xtgq4")
+
+[node name="ButtonHoovered" type="AudioStreamPlayer" parent="UISfxManager"]
+stream = ExtResource("6_2tkuq")
+bus = &"ui"
+
+[node name="ButtonPressed" type="AudioStreamPlayer" parent="UISfxManager"]
+stream = ExtResource("7_13nck")
+bus = &"ui"
+
+[node name="PanelHide" type="AudioStreamPlayer" parent="UISfxManager"]
+stream = ExtResource("8_5y85u")
+bus = &"ui"
+
+[node name="PanelShow" type="AudioStreamPlayer" parent="UISfxManager"]
+stream = ExtResource("9_8sect")
+bus = &"ui"
+
+[node name="Backgrounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_5y85u")
+
+[node name="BackgroundImageDay" type="TextureRect" parent="Backgrounds"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_75j07")
+
+[node name="BackgroundImageNight" type="TextureRect" parent="Backgrounds"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_13nck")
+
+[node name="ToDBtn" type="Button" parent="Backgrounds"]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 969.0
+offset_top = 34.0
+offset_right = 1001.0
+offset_bottom = 64.0
+scale = Vector2(2, 2)
+theme = ExtResource("13_h0t22")
+theme_override_font_sizes/font_size = 30
+icon = SubResource("AtlasTexture_oog20")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("21_13nck")
+metadata/_custom_type_script = "uid://cggal82yjvuj1"
+
+[node name="GrowthButton" parent="." instance=ExtResource("1_5scdr")]
+z_index = 1
+layout_mode = 0
+offset_left = 24.999998
+offset_top = 130.99998
+offset_right = 41.0
+offset_bottom = 154.99998
+
+[node name="GrowthButton2" parent="." instance=ExtResource("1_5scdr")]
+z_index = 3
+layout_mode = 0
+offset_left = 729.0
+offset_top = 131.00002
+offset_right = 745.0
+offset_bottom = 155.00002
+scale = Vector2(-20, 20)
+
+[node name="GrowthButton3" parent="." instance=ExtResource("1_5scdr")]
+z_index = 2
+layout_mode = 0
+offset_left = 800.0
+offset_top = 137.00002
+offset_right = 816.0
+offset_bottom = 161.00002
+
+[node name="FruitCountPanel" type="Panel" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -262.0
+offset_top = -4.999998
+offset_right = -210.0
+offset_bottom = 9.950001
+grow_horizontal = 2
+scale = Vector2(10, 10)
+theme_override_styles/panel = SubResource("StyleBoxTexture_75j07")
+
+[node name="FruitCountLbl" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(432, 94)
+layout_mode = 0
+offset_left = 353.0
+offset_top = 22.0
+offset_right = 785.0
+offset_bottom = 116.0
+pivot_offset = Vector2(216, 47)
+text = "0"
+label_settings = SubResource("LabelSettings_vqj28")
+horizontal_alignment = 1
+vertical_alignment = 2
+text_overrun_behavior = 1
+script = ExtResource("4_1dyn0")
+
+[node name="CustomCursor" type="TextureRect" parent="."]
+unique_name_in_owner = true
+z_index = 15
+texture_filter = 1
+layout_mode = 0
+mouse_filter = 2
+script = ExtResource("5_6y3jb")
+
+[node name="Butterfly" parent="." instance=ExtResource("7_75j07")]
+layout_mode = 0
+texture = SubResource("AtlasTexture_t86lh")
+
+[node name="Butterfly2" parent="." instance=ExtResource("7_75j07")]
+layout_mode = 0
+texture = SubResource("AtlasTexture_55b0d")
+
+[node name="Butterfly3" parent="." instance=ExtResource("7_75j07")]
+layout_mode = 0
+texture = SubResource("AtlasTexture_nei2r")
+
+[node name="OpenAudioControlPanelBtn" type="Button" parent="." node_paths=PackedStringArray("target_control")]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 815.0
+offset_top = 34.0
+offset_right = 845.0
+offset_bottom = 64.0
+scale = Vector2(2, 2)
+focus_mode = 0
+theme = ExtResource("13_h0t22")
+icon = SubResource("AtlasTexture_xtgq4")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("13_nei2r")
+target_control = NodePath("../AudioControlPanel")
+metadata/_custom_type_script = "uid://cggal82yjvuj1"
+
+[node name="AudioControlPanel" parent="." instance=ExtResource("9_55b0d")]
+visible = false
+z_index = 10
+layout_mode = 1
+
+[node name="OpenSaveManager" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 0
+offset_left = 893.0
+offset_top = 33.0
+offset_right = 923.0
+offset_bottom = 63.0
+scale = Vector2(2, 2)
+theme = ExtResource("13_h0t22")
+icon = SubResource("AtlasTexture_5y85u")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("24_kf2lf")
+metadata/_custom_type_script = "uid://cggal82yjvuj1"
+
+[connection signal="mouse_entered" from="OpenAudioControlPanelBtn" to="." method="_on_open_audio_control_panel_btn_mouse_entered"]
+[connection signal="mouse_exited" from="OpenAudioControlPanelBtn" to="." method="_on_open_audio_control_panel_btn_mouse_exited"]
+[connection signal="visibility_changed" from="AudioControlPanel" to="." method="_on_audio_control_panel_visibility_changed"]

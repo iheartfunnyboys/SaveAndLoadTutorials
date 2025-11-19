@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqot4enxhtj0v"]
+
+[ext_resource type="Texture2D" uid="uid://hc5dj4qe1g55" path="res://1_tweens_idler/ui_frame.tres" id="2_lerpa"]
+[ext_resource type="Script" uid="uid://cggal82yjvuj1" path="res://addons/enhanced_button.gd" id="2_tep1s"]
+[ext_resource type="Theme" uid="uid://762bfvmhp5ho" path="res://1_tweens_idler/tweens_idler_theme.tres" id="3_0yyt2"]
+[ext_resource type="Script" uid="uid://cblp5bsyjh71t" path="res://2_advanced_saving/save_manager.gd" id="3_j8u6c"]
+[ext_resource type="FontFile" uid="uid://dir6j7aie5jvw" path="res://1_tweens_idler/Micro_5/Micro5-Regular.ttf" id="4_j8u6c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75j07"]
+texture = ExtResource("2_lerpa")
+texture_margin_left = 26.0
+texture_margin_top = 6.0
+texture_margin_right = 5.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_lerpa"]
+font = ExtResource("4_j8u6c")
+font_size = 64
+
+[node name="SaveManager" type="Panel"]
+z_index = 10
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+theme = ExtResource("3_0yyt2")
+theme_override_styles/panel = SubResource("StyleBoxTexture_75j07")
+script = ExtResource("3_j8u6c")
+shown_scale = Vector2(1, 1)
+metadata/_custom_type_script = "uid://bt857hq1g43sr"
+
+[node name="SaveDataList" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 113.0
+offset_right = -30.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_0yyt2")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 9.0
+offset_right = 791.0
+offset_bottom = 90.0
+theme = ExtResource("3_0yyt2")
+text = "Save Manager"
+label_settings = SubResource("LabelSettings_lerpa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 39.0
+offset_right = 1080.0
+offset_bottom = 81.0
+
+[node name="NewSaveName" type="LineEdit" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "a_save"
+alignment = 2
+expand_to_text_length = true
+
+[node name="NewSaveButton" type="Button" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("3_0yyt2")
+theme_override_font_sizes/font_size = 30
+text = "New Save"
+script = ExtResource("2_tep1s")
+metadata/_custom_type_script = "uid://cggal82yjvuj1"
