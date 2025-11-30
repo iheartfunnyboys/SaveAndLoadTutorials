@@ -87,3 +87,17 @@ func delete_dir_recursive(a_dir_path : String) -> void:
 		var subdir_path = a_dir_path + "/" + a_subdir + "/"
 		delete_dir_recursive(subdir_path)
 	DirAccess.remove_absolute(a_dir_path)
+
+func string_to_vector3(a_string : String) -> Vector3:
+	a_string = a_string.substr(1, a_string.length() - 2)
+	var str_arr = a_string.split_floats(",")
+	if str_arr.size() < 3:
+		return Vector3.ZERO
+	return Vector3(str_arr[0], str_arr[1], str_arr[2])
+
+func string_to_vector2i(a_string : String) -> Vector2i:
+	a_string = a_string.substr(1, a_string.length() - 2)
+	var str_arr = a_string.split_floats(",")
+	if str_arr.size() < 2:
+		return Vector2i.ZERO
+	return Vector2i(int(str_arr[0]), int(str_arr[1]))
